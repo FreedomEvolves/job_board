@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This applications is a simple jobs board created on behalf of Tech Talent South.
 
-Things you may want to cover:
+Created by Sam Skinner, PhD.  January 2015.  Handmade in America.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Models: User (devise), Applicant, Jobs
