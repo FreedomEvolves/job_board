@@ -7,6 +7,65 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	  <%= csrf_meta_tags %>
+	  <nav class="navbar navbar-custom">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="http://techtalentsouth.com/"><img alt="TTS Logo" src="/assets/tts_logo.png" width="50px", height="50px"></a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Search All Jobs <span class="sr-only">(current)</span></a></li>
+		        
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Search by City <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">	            
+		            <li><a href="#">Atlanta</a></li>            
+		            <li class="divider"></li>
+		            <li><a href="#">Ashville</a></li>
+		            <li><a href="#">Charlotte</a></li>
+		            <li><a href="#">Raleigh</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">New Orleans</a></li>
+		          </ul>
+		        </li>
+		      <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Search by Category <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		          <li><a href="#">UX</a></li>               
+		            <li><a href="#">Front-end</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Back-end/Database</a></li>
+		            <li><a href="#">IT support</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Sales & Marketing</a></li>
+		          </ul>
+		        </li>
+		        <li><a href="#">Submit Job</a></li>
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="http://techtalentportal.herokuapp.com/">TTSPortal</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="new_user_session_path">Sign In</a></li>
+		            <li><a href="edit_user_registration_path">Edit User</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Sign Out</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div> <!-- /.navbar-collapse -->
+		  </div> <!-- /.container-fluid -->
+		</nav>
 	</head>
 	<body>
 		<% if notice != nil && user_signed_in? %>
@@ -17,7 +76,7 @@
 		<div class="container">	
 			<%= yield %>
 			<footer>
-				© Copyright 2015 ALL RIGHTS RESERVED | Tech Talent South
+				© Copyright 2015  | Tech Talent South | ALL RIGHTS RESERVED
 			</footer>
 		</div>
 	</body>
