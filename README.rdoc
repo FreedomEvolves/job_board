@@ -1,7 +1,9 @@
 == README
 
 This applications is a simple jobs board created on behalf of Tech Talent South.
+Models: User (devise), Job
 
-Created by Sam Skinner, PhD.  January 2015.  Handmade in America.
 
-Models: User (devise), Applicant, Jobs
+Crafted by Sam Skinner, PhD.  January 2015.  
+
+Copyright 2015, Tech Talent South.  All rights reserved.  Handmade in America.
