@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'New Job', new_job_path %>
 
-<h1>Listing Jobs</h1>
+<h1>Current Available Jobs</h1>
 
 <table>
   <thead>
@@ -21,13 +22,13 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= job.title %></td>
-        <td><%= job.category %></td>
         <td><%= job.city %></td>
+        <td><%= job.title %></td>
+        <td><%= job.company_name %></td>
+        <td><%= job.category %></td>        
         <td><%= job.description %></td>
         <td><%= job.perks %></td>
-        <td><%= job.how_to_apply %></td>
-        <td><%= job.company_name %></td>
+        <td><%= job.how_to_apply %></td>       
         <td><%= job.url %></td>
         <td><%= job.is_featured %></td>
         <td><%= link_to 'Show', job %></td>
@@ -40,4 +41,4 @@
 
 <br>
 
-<%= link_to 'New Job', new_job_path %>
+

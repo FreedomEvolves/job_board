@@ -3,7 +3,7 @@
 		<h2>Welcome to the</h2>
 		<h1>Tech Talent South</h1>
 		<h1>Jobs Board</h1>
-		<h3>Are you a company? Post your jobs <u>here</u>.</h3>
+		<h3>Are you a company? Post your jobs <u><%= link_to "here", new_job_path %></u>.</h3>
 		<h3>Are you a TTS student or alumus?</h3>
 
 		<% if user_signed_in? %>
@@ -11,8 +11,8 @@
 		  <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg" %>
 		<% else %>
 				<br>
-			  <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-lg"%>
-			  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg"%>
+			  <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-lg" %>
+			  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 		<% end %>
   </div>
 <br>
