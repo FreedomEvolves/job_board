@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   respond_to :html
 
   def index
-    @jobs = Job.all
+    @jobs = Job.all.descend
     respond_with(@jobs)
   end
 
