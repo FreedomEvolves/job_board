@@ -11,43 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :perks %><br>
-    <%= f.text_area :perks %>
-  </div>
-  <div class="field">
-    <%= f.label :how_to_apply %><br>
-    <%= f.text_area :how_to_apply %>
-  </div>
-  <div class="field">
-    <%= f.label :company_name %><br>
+  <div class="field form-group">
+    <%= f.label :company_name %>
     <%= f.text_field :company_name %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br>
+    <div class="field form-group">
+    <%= f.label :url %>
     <%= f.text_field :url %>
   </div>
+    <div class="field form-group">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :job_title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control", rows: "5"  %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :perks %><br>
+    <%= f.text_area :perks, class: "form-control", rows: "5"  %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :how_to_apply %><br>
+    <%= f.text_area :how_to_apply, class: "form-control", rows: "5" %>
+  </div>
+
+<%# if can? :update, jobs %>
   <div class="field">
     <%= f.label :is_featured %><br>
     <%= f.check_box :is_featured %>
   </div>
+  <%#end%>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
