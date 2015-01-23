@@ -6,6 +6,8 @@
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!-- enhance mobility -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	  <%= csrf_meta_tags %>
 	  <nav class="navbar navbar-custom navbar-fixed-top">
 		  <div class="container-fluid">
@@ -74,7 +76,7 @@
 		    <%= notice %>
 			</p>
 		<% end %>
-		<div class="container">	
+		<div class="container-fluid">	
 			<%= yield %>
 			<footer>
 				© Copyright 2015  | Tech Talent South | ALL RIGHTS RESERVED

@@ -1,39 +1,24 @@
 <p id="notice"><%= notice %></p>
 <br>
-<u><%= link_to 'Submit New Listing', new_job_path %></u>
+<u class="pull-right"><%= link_to 'Submit New Listing', new_job_path %></u>
 
 <h1 style="text-align:center">Current Available Jobs</h1>
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
-<table>
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>City</th>
-      <th>Title</th>
-      <th>Category</th>
-      <th>Url</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= job.company_name %></td>
-        <td><%= job.city %></td>
-        <td><%= job.title %></td>
-        <td><%= job.category %></td> 
-        <td><%= job.url %></td>       
-        <td><%= job.description %></td>
-        <td><span style="padding: 55px">Last updated:&nbsp; &nbsp;<%= time_ago_in_words(job.updated_at) %>&nbsp; &nbsp;ago</span></td>
-        <td><%= link_to 'Show More', job %></td>
-        <br>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @jobs.each do |job| %>     
+  <div class="container"><%= job.company_name %><br>
+         
+  </div> 
+  <div class="container"><b><%= job.title %></b><br>
+  <%= job.city %>
+  <%= job.description %></div>
+  <div class="container"><span style="padding: 55px">Last updated:&nbsp; &nbsp;<%= time_ago_in_words(job.updated_at) %>&nbsp; &nbsp;ago</span>
+  <%= link_to 'Show More', job %></div>
+  <br>
+  <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
+<% end %>
+<hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 <br>
 
 
