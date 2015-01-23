@@ -7,14 +7,26 @@
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 
 <% @jobs.each do |job| %>     
-  <div class="container"><%= job.company_name %><br>
-         
-  </div> 
-  <div class="container"><b><%= job.title %></b><br>
-  <%= job.city %>
-  <%= job.description %></div>
-  <div class="container"><span style="padding: 55px">Last updated:&nbsp; &nbsp;<%= time_ago_in_words(job.updated_at) %>&nbsp; &nbsp;ago</span>
-  <%= link_to 'Show More', job %></div>
+  <div class="container">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-3">
+          <%= job.company_name %>
+          <br> 
+          <!-- Using paperclip this is where company's logos would go. -->
+          <img alt="TTS Logo" src="/assets/tts_logo.png" width="50px", height="50px">     
+        </div> 
+        <div class="col-sm-9">
+          <b><%= job.title %></b>
+          <span class="pull-right"><%= job.city %></span><br>
+          <%= job.description %>
+          <br>
+          <span>Last updated:&nbsp; &nbsp;<%= time_ago_in_words(job.updated_at) %>&nbsp;ago</span>
+          <u class="pull-right"><%= link_to 'Show More', job %></u>
+        </div>
+      </div>
+    </div>
+  </div>
   <br>
   <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 <% end %>
