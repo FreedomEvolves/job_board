@@ -10,48 +10,58 @@
       </ul>
     </div>
   <% end %>
+  <div class="container">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-6">    
+          <div class="field form-group">         
+            <%= f.label :company_name %>
+            <%= f.text_field :company_name, autofocus: true %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :company_website %>
+            <%= f.text_field :url %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :job_title %>
+            <%= f.text_field :title %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="field form-group">
+            <%= f.label :city %>
+            <%= f.text_field :city %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :category %>
+            <%= f.text_field :category, placeholder: "Select category" %>
+          </div>
+        </div>
+      </div>
+        <div class="field form-group">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, class: "form-control", rows: "5"  %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :perks %><br>
+          <%= f.text_area :perks, class: "form-control", rows: "3"  %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :how_to_apply %><br>
+          <%= f.text_area :how_to_apply, class: "form-control", rows: "3" %>
+        </div>
 
-  <div class="field form-group">
-    <%= f.label :company_name %>
-    <%= f.text_field :company_name %>
-  </div>
-    <div class="field form-group">
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
-    <div class="field form-group">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :job_title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :category %>
-    <%= f.text_field :category %>
-  </div>
-
-  <div class="field form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control", rows: "5"  %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :perks %><br>
-    <%= f.text_area :perks, class: "form-control", rows: "3"  %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :how_to_apply %><br>
-    <%= f.text_area :how_to_apply, class: "form-control", rows: "5" %>
-  </div>
-
-<%# if can? :update, jobs %>
-  <div class="field">
-    <%= f.label :is_featured %><br>
-    <%= f.check_box :is_featured %>
-  </div>
-  <%#end%>
-  <div class="actions">
-    <%= f.submit class: "btn btn-primary" %>
+        <%# if can? :update, jobs %>
+        <!-- <div class="field">
+          <%= f.label :is_featured %><br>
+          <%= f.check_box :is_featured %>
+        </div> -->
+        <%#end%>
+        <div class="actions">
+          <%= f.submit class: "btn btn-primary" %>
+        
+      </div>
+    </div>
+    <div class="pull-right"><%= link_to 'View All Listings', jobs_path %></div>
   </div>
 <% end %>
