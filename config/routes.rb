@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :jobs
-
   root 'welcome#index'
+
   get 'welcome/index'
   get 'home' => 'welcome#index'
+  get 'jobs/search_by_city'
+  get 'jobs/search_by_category'
 
+  resources :jobs
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,9 +20,6 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
 
   # Example resource route with options:
   #   resources :products do

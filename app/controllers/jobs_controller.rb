@@ -8,6 +8,18 @@ class JobsController < ApplicationController
     respond_with(@jobs)
   end
 
+  def search_by_city
+    name = params[:city]
+    @jobs = Job.where(city:"#{name}")
+    respond_with(@jobs)
+  end
+
+  def search_by_category
+    name = params[:category]
+    @jobs = Job.where(category:"#{name}")
+    respond_with(@jobs)
+  end
+
   def show
     respond_with(@job)
   end
