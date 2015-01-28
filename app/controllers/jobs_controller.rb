@@ -20,6 +20,12 @@ class JobsController < ApplicationController
     respond_with(@jobs)
   end
 
+  # def search_by_type
+  #   name = params[:type]
+  #   @jobs = Job.where(type:"#{name}")
+  #   respond_with(@jobs)
+  # end
+
   def show
     respond_with(@job)
   end

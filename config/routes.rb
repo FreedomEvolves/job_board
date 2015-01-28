@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  get 'welcome/index'
-  get 'home' => 'welcome#index'
+  get 'home' => 'welcome#index', as: :home  #this seems redundant
   get 'jobs/search_by_city'
   get 'jobs/search_by_category'
+  #get 'jobs/search_by_type'
 
   resources :jobs
   devise_for :users
