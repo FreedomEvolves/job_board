@@ -10,19 +10,19 @@ class JobsController < ApplicationController
 
   def search_by_city
     name = params[:city]
-    @jobs = Job.where(city:"#{name}")
+    @jobs = Job.where(city:"#{name}").descend
     respond_with(@jobs)
   end
 
   def search_by_category
     name = params[:category]
-    @jobs = Job.where(category:"#{name}")
+    @jobs = Job.where(category:"#{name}").descend
     respond_with(@jobs)
   end
 
   def search_by_type
-    name = params[:type]
-    @jobs = Job.where(type:"#{name}")
+    name = params[:jobtype]
+    @jobs = Job.where(jobtype:"#{name}").descend
     respond_with(@jobs)
   end
 
@@ -60,6 +60,6 @@ class JobsController < ApplicationController
     end
 
     def job_params
-      params.require(:job).permit(:title, :category, :city, :description, :perks, :how_to_apply, :company_name, :url, :is_featured)
+      params.require(:job).permit(:title, :category, :city, :description, :perks, :how_to_apply, :company_name, :url, :is_featured, :jobtype)
     end
 end

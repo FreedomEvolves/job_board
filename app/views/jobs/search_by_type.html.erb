@@ -1,3 +1,10 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<u class="pull-right"><%= link_to 'Submit New Listing', new_job_path %></u>
+
+<h1 style="text-align:center">Current Available Jobs</h1>
+<hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 
 <% @jobs.each do |job| %>     
@@ -25,4 +32,4 @@
   <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 <% end %>
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
-<br>b
+<br>
