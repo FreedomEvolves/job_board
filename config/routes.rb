@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'home' => 'welcome#index', as: :home  #this seems redundant
   get 'jobs/search_by_city'
   get 'jobs/search_by_category'
-  #get 'jobs/search_by_type'
+  get 'jobs/search_by_type'
 
   resources :jobs
   devise_for :users
