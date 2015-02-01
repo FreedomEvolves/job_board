@@ -40,3 +40,5 @@ gem 'devise'
 
 gem 'cancan'
 
+gem 'brakeman', :require => false
+
