@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'welcome#home'
 
-  get 'home' => 'welcome#index', as: :home  #this seems redundant
+  get 'home' => 'welcome#home'
   get 'jobs/search_by_city'
   get 'jobs/search_by_category'
   get 'jobs/search_by_type'
