@@ -31,6 +31,9 @@ class JobsController < ApplicationController
   end
 
   def new
+    @cities = ['Asheville', 'Atlanta', 'Charlotte', 'Raleigh', 'New Orleans']
+    @categories = ['UX', 'Front-end', 'Back-end', 'IT support', 'Sales & Marketing', 'Tutoring']
+    @jobtypes = %w[Fulltime Parttime Freelance Intern]
     @job = Job.new
     respond_with(@job)
   end

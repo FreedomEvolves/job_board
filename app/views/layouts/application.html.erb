@@ -50,15 +50,19 @@
 		            <li><%= link_to "IT support", jobs_search_by_category_path(category: "IT support")%></li>
 		            <li class="divider"></li>
 		            <li><%= link_to "Sales & Marketing", jobs_search_by_category_path(category: "Sales & Marketing")%></li>
+		            <li class="divider"></li>
+		            <li><%= link_to "Tutoring/Kids Code", jobs_search_by_category_path(category: "Tutoring")%></li>
 		          </ul>
 		        </li>
 		    <!-- Dropdown for search_by_jobtype -->    
 		        <li class="dropdown">  
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Job Type <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
-		          	<li><%= link_to "Freelance", jobs_search_by_type_path(jobtype: "Freelance")%></li>
+		          	<li><%= link_to "Fulltime", jobs_search_by_type_path(jobtype: "Fulltime")%></li>
 		            <li><%= link_to "Parttime", jobs_search_by_type_path(jobtype: "Parttime")%></li>
-		            <li><%= link_to "Fulltime", jobs_search_by_type_path(jobtype: "Fulltime")%></li>   
+		            <li><%= link_to "Freelance", jobs_search_by_type_path(jobtype: "Freelance")%></li>
+		            <li><%= link_to "Intern", jobs_search_by_type_path(jobtype: "Intern")%></li>
+		               
 		          </ul>
 		        </li>
 
