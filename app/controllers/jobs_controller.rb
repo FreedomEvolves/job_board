@@ -9,20 +9,17 @@ class JobsController < ApplicationController
   end
 
   def search_by_city
-    name = params[:city]
-    @jobs = Job.where(city:"#{name}").descend
+    @jobs = Job.where(city: params[:city]).descend
     respond_with(@jobs)
   end
 
   def search_by_category
-    name = params[:category]
-    @jobs = Job.where(category:"#{name}").descend
+    @jobs = Job.where(category: params[:category]).descend
     respond_with(@jobs)
   end
 
   def search_by_type
-    name = params[:jobtype]
-    @jobs = Job.where(jobtype:"#{name}").descend
+    @jobs = Job.where(jobtype: params[:jobtype]).descend
     respond_with(@jobs)
   end
 

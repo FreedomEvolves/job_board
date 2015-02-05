@@ -4,39 +4,44 @@
 		<h2>Welcome to the</h2>
 		<h1>Tech Talent South</h1>
 		<h1>Jobs Board</h1></div><br>
-	</div>
-</div><br>
+	</div>  <!-- close div for haze -->
+</div><br><br><br> <!-- close div for center jump -->
+<div class='row'>
+	<div class="col-md-6">
+		<div class='panel panel-default'>
+			<div class="panel-body", style="text-align: center">
+				<h3>TTS student or alumnus?</h3>
+				<h4>Time to <b>Do Something Big!</b></h4>
+				<% if user_signed_in? %>
+					Welcome back, <%= current_user.email %>!<br><br>
+					<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
+				<% else %>
+					<br>
+					<%= link_to "Sign in", new_user_session_path, class: "btn btn-warning btn-lg" %>
+					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
+				<% end %>
+			</div>  <!-- close div for panel-body-->
+		</div> <!-- close div for panel panel-default-->
+	</div>  <!-- close div for col-md-6 -->
 
-<div class="col-md-5">
-	<div class='panel panel-default'>
-		<div class="panel-body", style="text-align: center">
-			<h3>TTS student or alumnus?</h3>
-			<h4>Time to <b>Do Something Big!</b></h4>
-			<% if user_signed_in? %>
-				Welcome back, <%= current_user.email %>!<br><br>
-				<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
-			<% else %>
-				<br>
-				<%= link_to "Sign in", new_user_session_path, class: "btn btn-warning btn-lg" %>
-				<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
-			<% end %>
-		</div>
-	</div>
-	<div class='panel panel-default'>
-		<div class="panel-body", style="text-align: center">
-			<h3>Are you a company? </h3>
-			<h4>Post your jobs <b><%= link_to "here", new_job_path %></b>.</h4>
-			<% if user_signed_in? %>
-				Welcome back, <%= current_user.email %>!<br><br>
-				<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
-			<% else %>
-				<br>
-				<%= link_to "Sign in", new_user_session_path, class: "btn btn-warning btn-lg" %>
-				<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
-			<% end %>
-		</div> <!-- div for panel-body -->
-	</div><br>  <!-- div for panel panel-default -->
-</div>  <!--div for col-md-5 -->
+	<div class="col-md-6">
+		<div class='panel panel-default'>
+			<div class="panel-body", style="text-align: center">
+				<h3>Are you a company? </h3>
+				<h4>Post your jobs <b><%= link_to "here", new_job_path %></b>.</h4>
+				<% if user_signed_in? %>
+					Welcome back, <%= current_user.email %>!<br><br>
+					<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
+				<% else %>
+					<br>
+					<%= link_to "Sign in", new_user_session_path, class: "btn btn-warning btn-lg" %>
+					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
+				<% end %>
+			</div> <!-- div for panel-body -->
+		</div><br>  <!-- div for panel panel-default -->
+	</div>  <!--div for col-md-6 -->
+</div>  <!-- close div for row -->
+
 <br>
 <br>
 <br>

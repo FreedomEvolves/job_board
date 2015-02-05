@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head>  <!-- the ordering of code should mean that local styling overrides bootstrap -->
 	  <title>JobsBoard</title>
+	  
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>	
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<!-- enhance mobility -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
 	  <%= csrf_meta_tags %>
 	  <nav class="navbar navbar-custom navbar-fixed-top">
 		  <div class="container-fluid">
