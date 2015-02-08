@@ -7,33 +7,37 @@
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 
-<% @jobs.each do |job| %>     
-  <div class="container">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-sm-3">
-          <%= job.company_name %>
-          <br> 
-          <!-- Using paperclip this is where company's logos would go. -->
-          <%= image_tag "tts_logo.png", alt: "TTS logo", class: "logo" %>    
-        </div> 
-        <div class="col-sm-9">
-          <b><%= job.title %></b>
-          <span class="pull-right"><%= job.city %></span><br>
-          <%= job.description %>
-          <br>
-          <span>Last updated:&nbsp; &nbsp;<%= time_ago_in_words(job.updated_at) %>&nbsp;ago</span>
-          <u class="pull-right"><%= link_to 'Show More', job %></u>
-          <%#= job.updated_at %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
-<% end %>
+<% @jobs.each do |job| %> 
+  <% sunset_in_days = 7 %> <!-- edit this line to set the number of days before a job post sunsets -->
+  <% sunset = sunset_in_days * 86400 %> <!-- conversion of days into seconds -->
+  <% if (Time.new - job.updated_at) < sunset %>  <!-- criterion for sunseting a job post -->
+    <div class="container">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-sm-3">
+            <%= job.company_name %>
+            <br> 
+            <!-- Using paperclip this is where company's logos would go. -->
+            <%= image_tag "tts_logo.png", alt: "TTS logo", class: "logo" %>    
+          </div>  <!-- close div for col-sm-3 -->
+          <div class="col-sm-9">
+            <b><%= job.title %></b>
+            <span class="pull-right"><%= job.city %></span><br>
+            <%= job.description %>
+            <br>
+            <span>Last updated:&nbsp; &nbsp;<%= time_ago_in_words(job.updated_at) %>&nbsp;ago</span>
+            <u class="pull-right"><%= link_to 'Show More', job %></u>
+          </div>  <!-- close div for col-sm-9 -->
+        </div>  <!-- close div for row -->
+      </div>  <!-- close div for col-md-12 -->
+    </div>  <!-- close div for container -->
+    <br>
+    <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
+  <% end %>  <!-- closes the if statement -->
+<% end %>  <!-- closes the do loop -->
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 <br>
+
 
 
 
