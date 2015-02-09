@@ -33,10 +33,10 @@ group :production do
 end
 
 gem 'annotate'
-
+### gems used to control access to the site and access within the site
 gem 'devise'
-
 gem 'cancan'
-
+#gem 'rolify'
+### for testing
 gem 'brakeman', :require => false
 

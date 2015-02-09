@@ -36,6 +36,9 @@ class JobsController < ApplicationController
   end
 
   def edit
+    @cities = ['Asheville', 'Atlanta', 'Charlotte', 'Raleigh', 'New Orleans']
+    @categories = ['UX', 'Front-end', 'Back-end', 'IT support', 'Sales & Marketing', 'Tutoring']
+    @jobtypes = %w[Fulltime Parttime Freelance Intern]
   end
 
   def create

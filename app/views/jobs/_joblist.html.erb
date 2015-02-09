@@ -8,7 +8,7 @@
 <hr style="width:65%;height:1px;background-color:#f79027;border:none" align='center' noshade='noshade'>
 
 <% @jobs.each do |job| %> 
-  <% sunset_in_days = 7 %> <!-- edit this line to set the number of days before a job post sunsets -->
+  <% sunset_in_days = 45 %> <!-- edit this line to set the number of days before a job post sunsets -->
   <% sunset = sunset_in_days * 86400 %> <!-- conversion of days into seconds -->
   <% if (Time.new - job.updated_at) < sunset %>  <!-- criterion for sunseting a job post -->
     <div class="container">
