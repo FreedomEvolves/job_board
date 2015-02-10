@@ -25,6 +25,9 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  ### for testing
+	gem 'brakeman', :require => false
+	gem 'better_errors'
 end
 
 group :production do
@@ -33,10 +36,10 @@ group :production do
 end
 
 gem 'annotate'
+
 ### gems used to control access to the site and access within the site
 gem 'devise'
 gem 'cancan'
 #gem 'rolify'
-### for testing
-gem 'brakeman', :require => false
+
 
