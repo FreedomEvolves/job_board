@@ -40,6 +40,6 @@ gem 'annotate'
 ### gems used to control access to the site and access within the site
 gem 'devise'
 gem 'cancan'
-#gem 'rolify'
+
 
 
