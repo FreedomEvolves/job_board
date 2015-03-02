@@ -1,3 +1,7 @@
+<% if alert %>
+  <div id="notice" class="alert alert-danger" role="alert"><%= alert %></div>
+<% end %>
+
 <%= form_for(@job) do |f| %>
   <% if @job.errors.any? %>
     <div id="error_explanation">
@@ -61,9 +65,10 @@
           <%#= f.check_box :is_featured %>
         </div> -->
         <%#end%>
+      <% if can? :create, @job %>
         <div class="actions">
-          <%= f.submit class: "btn btn-primary" %>
-        
-      </div>
+          <%= f.submit class: "btn btn-primary" %>        
+        </div>
+      <% end %>  
     </div>
 <% end %>

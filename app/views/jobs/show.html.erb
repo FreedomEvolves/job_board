@@ -1,3 +1,7 @@
+<% if alert %>
+  <div id="notice" class="alert alert-danger" role="alert"><%= alert %></div>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 <br>
 <br>
@@ -53,8 +57,12 @@
     <%= @job.is_featured %>
   </p>  -->
 
-  <%= link_to 'Back', jobs_path %> |
-  <%= link_to 'Edit', edit_job_path(@job) %> |
-  <%= link_to 'Delete Listing', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Back', jobs_path %> 
+  <% if can? :update, @job %>
+  <%= link_to '| Edit', edit_job_path(@job) %> 
+   <% end %>
+   <% if can? :destroy, @job %>
+  <%= link_to '| Delete Listing', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div>
   <br>

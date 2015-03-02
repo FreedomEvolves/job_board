@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, :except => [:home]
   before_action :configure_permitted_parameters, if: :devise_controller?
   
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to jobs_path, :alert => exception.message
+  end
 
   protected
 
