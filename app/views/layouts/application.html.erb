@@ -66,8 +66,11 @@
 		               
 		          </ul>
 		        </li>
-		        <% if can? :create, @job %>
+		        <%# if can? :create, @job %>
 		        	<li><%= link_to "Submit Job", new_job_path %></li>
+		        <%# end %>
+		        <% if can? :mange, User %>
+		        	<li><%= link_to "Show Users", admin_path %></li>
 		        <% end %>
 		      </ul>
 		    <!-- Link to TTS portal-->  

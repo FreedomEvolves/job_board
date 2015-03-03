@@ -4,6 +4,6 @@ This applications is a simple jobs board created on behalf of Tech Talent South.
 Models: User (devise), Job
 
 
-Crafted by Sam Skinner, PhD.  January 2015.  
+Crafted by Sam Skinner, PhD.  January - March 2015.  
 
 Copyright 2015, Tech Talent South.  All rights reserved.  Handmade in America.

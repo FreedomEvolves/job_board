@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'jobs/search_by_city'
   get 'jobs/search_by_category'
   get 'jobs/search_by_type'
+  get 'admin' => 'welcome#admin' 
+  get 'add_role' => 'welcome#add_role'
 
   resources :jobs
   devise_for :users

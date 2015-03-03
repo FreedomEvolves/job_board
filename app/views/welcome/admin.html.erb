@@ -1,0 +1,21 @@
+<br>
+<br>
+<br>
+<br>
+<h1>List of All Users</h1>
+<tbody>
+	<tr>
+		<h4><td>User-Email</td>
+		<td>Role</td></h4>
+	</tr>
+	<br>
+	<% @user.each do |user| %>
+		<tr>
+			<td><%= user.email %></td>
+			<td><%= user.role %></td>
+			<td><%= link_to "Edit", add_role_path %></td>
+			<td><%= link_to "Destroy", add_role_path%></td><br>
+		</tr>
+	<% end %>
+</tbody>
+

@@ -20,7 +20,7 @@
       <% if @validatable %>
         <em class="pull-right">(<%= @minimum_password_length %> characters minimum)</em>
       <% end %>       
-      <br><br>
+      <br><br><br>
       <div class="input-group input-group-md">
         <span class="input-group-addon glyphicon glyphicon-lock" ></span>
         <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control"%>
