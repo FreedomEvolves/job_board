@@ -1,11 +1,19 @@
-<h2 class="center">Tech Talent South Jobs Board</h2>
-<div class="container">
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<br><br><br>
+<div class="center tts-header">
+  <div id="haze", style='width: 940px; margin: auto'>
+    <h2>Welcome to the</h2>
+    <h1><i>Tech Talent South Jobs Board</i></h1>
+    </div><br>
+  </div>  <!-- close div for haze -->
+</div><br><br><br> <!-- close div for center rainbow -->
+<%= link_to "Sign in", new_user_session_path, class: "btn btn-success btn-lg" %>
+<%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
 
-    <h2 class="center">Sign in</h2>
-    <br>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class='row'>
+  <div class="col-md-5 col-md-offset-4">
+    <div class='panel panel-default'>
+      <div class="panel-body", style="text-align: center">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="input-group input-group-lg">
         <span class="input-group-addon glyphicon glyphicon-envelope"></span>
         <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control"%>
@@ -18,16 +26,26 @@
       <p class="pull-right"><%= link_to "Forgot Password?", new_user_password_path %></p>
       <br>
       <% if devise_mapping.rememberable? -%>
-        <div class="field">
+        <div class="input-group input-group-lg">
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
         </div>
-      <% end -%>
+      <% end -%><br>
+      <%= f.submit "Sign in", class: "btn btn-success btn-lg" %>
 
-      <div class="input-group input-group-md">
-        <%= f.submit "Sign in", class: "btn btn-primary btn-md" %>
-      </div>
     <% end %>
+        <% if user_signed_in? %>
+          Welcome back, <%= current_user.email %>!<br><br>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
+        <% else %>
+          <br>
+        <% end %>
+      </div>  <!-- close div for panel-body-->
+    </div> <!-- close div for panel panel-default-->
+  </div>  <!-- close div for col-md-6 -->
+</div>  <!-- close div for row -->
+
+
     <br>
     <br>
   </div>

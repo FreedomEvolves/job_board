@@ -1,12 +1,19 @@
-<br>
-<br>
-<div class="container">
-  <h2 class="center">Tech Talent South Jobs Board</h2>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h2 class="center">Sign Up & Find A Job!</h2>
-      <br>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<br><br><br>
+<div class="center tts-header">
+  <div id="haze", style='width: 940px; margin: auto'>
+    <h2>Welcome to the</h2>
+    <h1><i>Tech Talent South Jobs Board</i></h1>
+    </div><br>
+  </div>  <!-- close div for haze -->
+</div><br><br><br> <!-- close div for center rainbow -->
+<%= link_to "Sign in", new_user_session_path, class: "btn btn-success btn-lg" %>
+<%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
+
+<div class='row'>
+  <div class="col-md-5 col-md-offset-4">
+    <div class='panel panel-default'>
+      <div class="panel-body", style="text-align: center">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
       <div class="input-group input-group-md">
         <span class="input-group-addon glyphicon glyphicon-envelope"></span>
@@ -26,14 +33,27 @@
         <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control"%>
       </div>
       <br>
-      <div class="input-group input-group-md">
-        <%= f.submit "Sign up", class: "btn btn-primary btn-md"%>
-      </div>
+
+        <%= f.submit "Sign up", class: "btn btn-success btn-lg"%>
+
       <br>
     </div>
   </div>
     <% end %>
+      </div>  <!-- close div for panel-body-->
+    </div> <!-- close div for panel panel-default-->
+  </div>  <!-- close div for col-md-6 -->
+</div>  <!-- close div for row -->
+
+
+    <br>
+    <br>
+  </div>
+</div>
 </div>
 <br>
 <br>
+<br>
+<br>
+
 
