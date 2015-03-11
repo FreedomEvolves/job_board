@@ -5,18 +5,20 @@
 		<h1><i>Tech Talent South Jobs Board</i></h1>
 		</div><br>
 	</div>  <!-- close div for haze -->
-</div><br><br><br> <!-- close div for center rainbow -->
-<%= link_to "Sign in", new_user_session_path, class: "btn btn-success btn-lg" %>
-					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
+</div> <!-- close div for center tts-header -->
+
+<div class="center tts-header">
+<h2>A website where TTS grads can find jobs!</h2><br><br><br> 
+</div>
+
 <div class='row'>
 	<div class="col-md-5 col-md-offset-4">
 		<div class='panel panel-default'>
 			<div class="panel-body", style="text-align: center">
-				<h3>TTS student or alumnus?</h3>
-				<h4>Time to <b>Do Something Big!</b></h4>
+				<h2>Time to... <b>Do Something Big!</b></h2>
 				<% if user_signed_in? %>
 					Welcome back, <%= current_user.email %>!<br><br>
-					<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
+					<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-success btn-lg" %>
 				<% else %>
 					<br>
 					<%= link_to "Sign in", new_user_session_path, class: "btn btn-success btn-lg" %>

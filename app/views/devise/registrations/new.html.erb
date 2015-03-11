@@ -6,7 +6,7 @@
   </div>  <!-- close div for haze -->
 </div><br><!-- close div for center tts-header -->
 <div class="center tts-header">
-<h2>A website where TTS grads can find jobs!</h2><br><br><br> 
+<h2>A website where TTS grads can find jobs!</h2><br><br>
 </div>
 
 <div class='row'>
@@ -38,6 +38,10 @@
       <div class="input-group input-group-md">
         <span class="input-group-addon glyphicon glyphicon-lock" ></span>
         <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control"%>
+      </div>
+      <div class="field">
+        <%#= f.label :admin %><br>
+        Do you represent a company? <%= f.check_box :company %>
       </div>
       <br>
 

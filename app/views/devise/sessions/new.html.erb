@@ -6,7 +6,7 @@
   </div>  <!-- close div for haze -->
 </div><br><!-- close div for center tts-header -->
 <div class="center tts-header">
-<h2>A website where TTS grads can find jobs!</h2><br><br><br> 
+<h2>A website where TTS grads can find jobs!</h2><br><br> 
 </div>
 <div class='row'>
   <div class="col-md-5 col-md-offset-4">
@@ -41,7 +41,7 @@
     <% end %>
         <% if user_signed_in? %>
           Welcome back, <%= current_user.email %>!<br><br>
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning btn-lg" %>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-success btn-lg" %>
         <% else %>
           <br>
         <% end %>
