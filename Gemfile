@@ -36,6 +36,7 @@ group :production do
 end
 
 gem 'annotate'
+gem 'figaro'
 
 ### gems used to control access to the site and access within the site
 gem 'devise'
