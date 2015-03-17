@@ -25,9 +25,11 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'spring-commands-rspec'
   ### for testing
 	gem 'brakeman', :require => false
 	gem 'better_errors'
+	gem 'rspec-rails'
 end
 
 group :production do
