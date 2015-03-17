@@ -25,12 +25,30 @@ RSpec.describe Job do
 		expect(job.save).to eq(true)
 		expect(job).to be_persisted
 	end
-#validates :company_name, :city, :title, :category, :jobtype, :description, :how_to_apply, presence: true
+
 	describe 'mandatory attributes' do
 		job = Job.new
 		job.save
+		specify 'company_name' do
+			expect(job.errors[:company_name]).to include "can't be blank"
+		end
 		specify 'city' do
 			expect(job.errors[:city]).to include "can't be blank"
+		end
+		specify 'title' do
+			expect(job.errors[:title]).to include "can't be blank"
+		end
+		specify 'category' do
+			expect(job.errors[:category]).to include "can't be blank"
+		end
+		specify 'jobtype' do
+			expect(job.errors[:jobtype]).to include "can't be blank"
+		end
+		specify 'description' do
+			expect(job.errors[:description]).to include "can't be blank"
+		end
+		specify 'how_to_apply' do
+			expect(job.errors[:how_to_apply]).to include "can't be blank"
 		end
 	end
 
