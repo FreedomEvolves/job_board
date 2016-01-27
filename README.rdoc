@@ -1,7 +1,7 @@
 == README
 
 This applications is a simple jobs board created on behalf of Tech Talent South.
-Models: User (devise), Job
+Models: User (devise), Job.  This is the code prior to moving it to a private repo and finishing out the work.
 
 
 Crafted by Sam Skinner, PhD.  January - March 2015.  
